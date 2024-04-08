@@ -54,7 +54,7 @@
  * has a distinct Github fork— the Source Code URL should just be the main
  * Marlin repository.
  */
-#define SOURCE_CODE_URL "github.com/fram446742/Tevo-Tarantula-Marlin-SKR-E3V3"
+#define SOURCE_CODE_URL "github.com/fram446742/Marlin"
 
 /**
  * Default generic printer UUID.

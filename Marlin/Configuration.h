@@ -1362,10 +1362,10 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+// #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
-#define USE_PROBE_FOR_Z_HOMING
+// #define USE_PROBE_FOR_Z_HOMING
 
 /**
  * Z_MIN_PROBE_PIN
@@ -1837,8 +1837,9 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 235
-#define Y_BED_SIZE 235
+//REVIEW: Bed size and max pos
+#define X_BED_SIZE 200  
+#define Y_BED_SIZE 200  
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1846,7 +1847,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 250
+#define Z_MAX_POS 200
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -1874,7 +1875,7 @@
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
     #define MIN_SOFTWARE_ENDSTOP_X
     #define MIN_SOFTWARE_ENDSTOP_Y
-    #define MIN_SOFTWARE_ENDSTOP_Z
+    // #define MIN_SOFTWARE_ENDSTOP_Z               //Adjust Z Offset below 0
     #define MIN_SOFTWARE_ENDSTOP_I
     #define MIN_SOFTWARE_ENDSTOP_J
     #define MIN_SOFTWARE_ENDSTOP_K
@@ -2057,7 +2058,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
+// #define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 #define MESH_BED_LEVELING
 
@@ -2386,7 +2387,7 @@
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
 #if ENABLED(EEPROM_SETTINGS)
     #define EEPROM_AUTO_INIT    // Init EEPROM automatically on any errors.
-    //#define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build.
+    #define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build.
 #endif
 
 // @section host
